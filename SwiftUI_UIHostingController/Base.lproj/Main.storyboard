@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xqL-Ed-Edw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftUI_UIHostingController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEV-eH-8Fa">
+                                <rect key="frame" x="134" y="165" width="146" height="30"/>
+                                <state key="normal" title="Show Second Screen"/>
+                                <connections>
+                                    <segue destination="WVp-Ww-2wy" kind="show" destinationCreationSelector="embedSwiftUIView:" id="yqg-XE-bMh"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9DZ-PI-dYP">
+                                <rect key="frame" x="87" y="220" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="rFj-6E-0ox" kind="embed" destinationCreationSelector="embedSwiftUIView:" id="NSp-N1-r1e"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SEV-eH-8Fa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="77" id="NpD-7r-etw"/>
+                            <constraint firstItem="SEV-eH-8Fa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zne-kr-VA8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VA4-Hp-hhe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="172"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="laT-B9-7gC">
+            <objects>
+                <hostingController id="WVp-Ww-2wy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pnK-CB-p80"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hnR-sZ-133" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1810" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PCY-5e-4tD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xqL-Ed-Edw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2MZ-qK-1Se">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="a0o-4N-t9d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pi9-KJ-amG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="FpD-TE-w95">
+            <objects>
+                <hostingController id="rFj-6E-0ox" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sfd-Bv-mJV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="-285"/>
+        </scene>
+    </scenes>
+</document>
